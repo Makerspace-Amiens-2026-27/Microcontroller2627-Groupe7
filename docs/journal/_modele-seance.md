@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AAAA-MM-JJ : sujet de la séance"
-parent: Prénom Nom
+parent: Nathan BARONICK
 grand_parent: Journal de bord
 ---
 
