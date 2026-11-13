@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Étudiant 1
+title: Nathan BARONICK
 parent: Journal de bord
 has_children: true
 ---
