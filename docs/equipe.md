@@ -6,55 +6,40 @@ title: Équipe et rôles
 
 # Équipe et rôles
 
-{: .a_supprimer }
-> Présentez l'équipe et la répartition des rôles, décidée **dès le début** du projet.
-> Un rôle ne veut pas dire « seul autorisé à toucher à ça » : le responsable
-> s'assure que sa partie avance, le backup peut prendre le relais en cas d'absence.
-> Voir [Constituer et organiser son équipe](https://doc.makerspace-amiens.fr/workshops/methodologie-de-projet/concepts/constituer-organiser-equipe/).
-
 ## Membres
-
-{: .a_modifier }
-> Une ligne par membre. Le compte GitHub permet de relier chacun à ses contributions.
 
 | Membre | Formation | Compte GitHub |
 |---|---|---|
-| Prénom Nom | … | [@pseudo](https://github.com/pseudo) |
-| Prénom Nom | … | [@pseudo](https://github.com/pseudo) |
+| Nathan BARONICK | 2e année Pré-ingénieur, UniLaSalle | [@nayhyx](https://github.com/nayhyx) |
+| Pio AWAIDA | 2e année Pré-ingénieur, UniLaSalle | [@PioAwaida](https://github.com/PioAwaida) |
+| Timothé LEJOSNE | 2e année Pré-ingénieur, UniLaSalle | [@timothe-lejosne](https://github.com/timothe-lejosne) |
 
 ## Rôles
 
-{: .a_modifier }
-> Un responsable **et** un backup par rôle. Supprimez les rôles qui ne concernent
-> pas votre projet, ajoutez ceux qui manquent.
->
-> Les rôles peuvent aussi se répartir **par sous-ensemble** plutôt que par domaine
-> (par exemple « Pince », « Châssis », « Carte capteurs »), en reprenant le découpage
-> de la page **Conception**. Chaque responsable suit alors son sous-ensemble dans
-> toutes ses dimensions : mécanique, électronique et code.
-
 | Rôle | Responsable | Backup | Ce qu'il couvre |
 |---|---|---|---|
-| Mécanique / CAO | … | … | Conception, impression, assemblage |
-| Électronique | … | … | Schéma, câblage, PCB |
-| Logiciel / firmware | … | … | Code embarqué, tests logiciels |
-| Coordination documentation | … | … | Cohérence du site, structure, relecture finale |
-| Coordination / planning | … | … | Suivi des délais, animation des réunions |
+| Mécanique / CAO | Timothé | Pio | Conception, impression 3D, assemblage physique |
+| Électronique | Pio | Nathan | Schémas, câblage sur breadboard, soudures |
+| Logiciel / firmware | Nathan | Timothé | Code C/C++ embarqué, tests sur moniteur série |
+| Coordination documentation | Nathan | Pio | Rigueur du journal de bord, structure GitHub Pages |
+| Coordination / planning | Timothé | Nathan | Suivi des livrables, anticipation des TD |
 
 ## Fonctionnement
 
-{: .a_modifier }
-> Quand vous réunissez-vous ? Comment communiquez-vous (messagerie, issues GitHub) ?
-> Comment tranchez-vous un désaccord technique (vote, décision du responsable de la
-> partie concernée, arbitrage par l'encadrant) ?
+**Communication :** 
+- Les échanges rapides et l'entraide se font via un groupe snapchat.
+- Les tâches, le code et la documentation sont centralisés sur le dépôt GitHub.
 
-### Suivi des tâches (optionnel)
+**Réunions et synchronisation :**
+- Un point rapide de 5 minutes au début de chaque séance de TD pour définir l'objectif du jour.
+- Un bilan de fin de séance avec la rédaction du journal de bord de chacun.
 
-{: .a_modifier }
-> Pour les équipes qui le souhaitent : suivez les tâches avec les **issues** et un
-> tableau **GitHub Projects**, en assignant chaque tâche
-> à un membre. Reliez le tableau à votre repo pour qu'il apparaisse dans l'onglet
-> Projects. Si vous ne l'utilisez pas, supprimez cette section.
-> Voir [Gérer son projet avec GitHub : Issues et Projects](https://doc.makerspace-amiens.fr/workshops/methodologie-de-projet/tutorials/gerer-projet-github/).
+**Prise de décision :**
+- En cas de désaccord technique, c'est le responsable du pôle concerné (Mécanique, Élec, Logiciel) qui tranche la décision finale.
+- En cas de blocage majeur, nous ferons appel à l'enseignant pour un arbitrage.
+
+### Suivi des tâches
+
+Nous gérons l'avancement de notre projet à l'aide des **Issues** et d'un tableau **GitHub Projects**. Chaque tâche est assignée à un membre de l'équipe avec un niveau de priorité, ce qui nous permet de suivre visuellement ce qui est "À faire", "En cours" et "Terminé".
 
 [📋 Tableau de suivi du projet]({{ site.gh_edit_repository }}/projects){: .btn }
