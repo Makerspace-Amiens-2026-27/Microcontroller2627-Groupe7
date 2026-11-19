@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 
-constexpr int PIN_BUTTON = D5;
+constexpr int PIN_BUTTON = D5; //PRESSED_LEVEL en LOW
 constexpr int PIN_JOYSTICK_X = D0;
 constexpr int PIN_JOYSTICK_Y = D1;
 constexpr int PIN_JOYSTICK_SELECT = D2;
