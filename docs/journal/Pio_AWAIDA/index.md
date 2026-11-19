@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Nathan BARONICK
+title: Pio AWAIDA
 parent: Journal de bord
 has_children: true
 ---
