@@ -40,5 +40,5 @@ void loop() {
         count++;
         Serial.printf("Appui n°%d\n", count);
     }
-}
+} 
 
