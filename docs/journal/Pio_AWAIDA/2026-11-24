@@ -1,0 +1,38 @@
+---
+layout: default
+title: "2026-11-24 : Validation des 4 modules et lancement KiCad"
+parent: Pio AWAIDA
+grand_parent: Journal de bord
+---
+
+# 2026-11-24 : Validation des 4 modules et lancement KiCad
+
+**Séance :** planifiée · **Durée :** 1 h 30
+
+## Fait
+
+- **Test du buzzer :** Câblage et validation réussis. L'exécution de la gamme « do-ré-mi-fa-sol » confirme qu'il s'agit d'un **buzzer passif** (piloté en fréquence).
+- **Test de l'écran :** Validation de l'affichage en **mode SPI** avec le programme de test affichant « PONG », une balle bleue immobile et un rectangle blanc.
+- **Intégration des 4 modules :** Mise en commun sur breadboard du bouton, du joystick, du buzzer et de l'écran. L'ensemble fonctionne simultanément sans conflit matériel ni logiciel.
+- **Lancement de la CAO électronique (en parallèle) :** Pio et Timothé ont pris en main KiCad pour démarrer la conception de la carte électronique du projet.
+
+### Données d'entrée validées pour le schéma KiCad
+
+| Module | Alimentation / Brochage | Comportement / Protocole attendu | Programme minimal validé |
+|---|---|---|---|
+| **Bouton poussoir** | `GND` + GPIO `[À compléter]` | Entrée numérique en `INPUT_PULLUP` (`HIGH` au repos, `LOW` à l'appui) | Lecture d'état numérique |
+| **Joystick analogique** | `[3,3 V]` / `GND` + 2 broches ADC `[À compléter]` | Plage ADC 12 bits (`0`–`4095`), centre à `2048`, zone morte `300`, sortie normalisée `-1` à `1` | Calibration + normalisation |
+| **Buzzer** | `GND` + GPIO PWM `[À compléter]` | **Buzzer passif** (signal carré / fréquence variable) | Gamme *do-ré-mi-fa-sol* |
+| **Écran couleur** | `[3,3 V]` / `GND` + bus **SPI** (`MOSI`, `SCK`, `CS`, `DC`, `RST` : `[À compléter]`) | Communication en **mode SPI** | Affichage « PONG » (balle bleue + rectangle blanc) |
+
+## Pourquoi
+
+- Valider les 4 modules individuellement puis ensemble sur breadboard avant de figer le schéma électronique garantit qu'il n'existe aucun conflit de broches (notamment entre le bus SPI de l'écran, les entrées ADC du joystick et la broche PWM du buzzer).
+- Identifier précisément la nature de chaque composant (buzzer passif, écran SPI, tirage pull-up interne du bouton) évite les erreurs de conception sur KiCad qui seraient coûteuses à corriger une fois le PCB fabriqué.
+- Travailler en parallèle entre la validation firmware/breadboard et la saisie sous KiCad permet d'avancer plus vite tout en croisant immédiatement nos contraintes logicielles et matérielles.
+
+## Reste à faire
+
+- Compléter le tableau ci-dessus avec le brochage exact (`GPIO`) utilisé sur la breadboard et le partager à Pio et Timothé pour verrouiller le schéma KiCad.
+- Vérifier ensemble le schéma électronique (tensions d'alimentation, affectation des broches SPI/ADC/PWM, empreintes des composants) avant de passer au routage.
+- Faire évoluer le firmware commun pour animer la balle et la raquette de « PONG » à partir des valeurs normalisées du joystick et ajouter les retours sonores sur le buzzer.
